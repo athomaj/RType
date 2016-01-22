@@ -1,0 +1,22 @@
+/* starting point | ending point | size of sprites */
+/* Must Be at Beginning of txt */
+
+NORMAL:
+spritePosition:0,0|520,260|260,143
+scale:2.5
+frequencyAnimation:0.5
+
+ATTACK:
+spritePosition:0,0|520,260|260,143
+scale:2.5
+frequencyAnimation:0.2
+
+MOVEMENT:
+spritePosition:0,0|520,260|260,143
+scale:2.5
+frequencyAnimation:2.5
+
+
+distanceMove:15
+position:1000,600
+frequencyMove:0.5

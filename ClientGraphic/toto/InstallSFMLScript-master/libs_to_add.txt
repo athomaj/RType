@@ -1,0 +1,1 @@
+-lcsfml-graphics -lcsfml-window -lsfml-graphics -lsfml-window

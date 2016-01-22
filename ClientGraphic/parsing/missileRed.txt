@@ -1,0 +1,27 @@
+/* starting point | ending point | size of sprites */
+/* Must Be at Beginning of txt */
+NORMAL:
+spritePosition:0,0|255,0|32,32
+scale:2.5
+frequencyAnimation:0.5
+
+ATTACK:
+spritePosition:0,0|255,0|32,32
+scale:2.5
+frequencyAnimation:0.2
+
+
+
+MOVEMENT:
+spritePosition:0,0|204,0|17,17
+scale:2.5
+frequencyAnimation:2.5
+
+DEATH:
+spritePosition:0,0|17,0|17,17
+scale:2.5
+frequencyAnimation:0.02
+
+positionShoot:0,0
+distanceMove:50
+frequencyMove:0

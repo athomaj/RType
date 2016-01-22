@@ -1,0 +1,7 @@
+//Type d'objet
+Vessel
+//cycle debut		cycle fin		orientation	weapon
+0			10			0		Laser
+10			15			0		Laser
+15			20			0		Canon
+20			30			0		Atomic

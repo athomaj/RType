@@ -1,0 +1,28 @@
+/* starting point | ending point | size of sprites */
+/* Must Be at Beginning of txt */
+NORMAL:
+spritePosition:104,168|264,168|80,24
+scale:1.5
+frequencyAnimation:0.5
+
+ATTACK:
+spritePosition:184,168|264,168|80,24
+scale:1.5
+frequencyAnimation:0.2
+
+MOVEMENT:
+spritePosition:104,168|264,168|80,24
+scale:1.5
+frequencyAnimation:2.5
+
+DEATH:
+spritePosition:0,50|200,50|33,35
+scale:2.5
+frequencyAnimation:0.02
+
+SOUND:playerMissileSound.wav
+volume:5
+
+positionShoot:-15,-5
+distanceMove:70
+frequencyMove:0

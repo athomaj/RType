@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.cproject" />
+    <None Include="..\.project" />
+    <None Include="..\Makefile" />
+    <None Include="..\sfmlt" />
+    <None Include="..\toto.tip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\airstrike.ttf" />
+    <Font Include="..\arial.ttf" />
+    <Font Include="..\imagine_font.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\select.tga" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Audio.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnectionPage.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTime.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelPage.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LinuxWindow.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Loader.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapParsing.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="menuWindow.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseOnBox.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkEvent.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionPage.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomPage.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Score.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scorePage.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WriteInBox.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IWindow.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsWindow.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectionPage.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameTime.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelPage.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LinuxWindow.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Loader.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapParsing.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="menuWindow.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseOnBox.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkEvent.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionPage.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomPage.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Score.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScorePage.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteInBox.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsWindow.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

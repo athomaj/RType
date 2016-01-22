@@ -1,0 +1,287 @@
+
+The following array is the prototype of all sending packets:
+
+    part      |	    size
+    ------------------------
+    magic key |	    1 byte
+    size      |	    1 byte
+    type      |	    1 byte
+    data      |	    x bytes
+
+###########################################
+
+A magic key MUST be used to be sure that we're dealing with the right program.
+
+magic key 	: 0xBB	  (for "Big Boobs" of course)
+
+###########################################
+
+The size byte gives the size of the entier packet.
+This means that it counts the number of byte in the data and the type part,
+but also in the magic key and the size.
+
+###########################################
+
+type  		| code
+-----------------------
+connect		| Ox01
+room		| 0x02
+create		| 0x03
+join		| 0x04
+leave		| 0x05
+ready		| 0x06
+start		| 0x07
+data map	| 0x08
+end party	| 0x09
+score		| 0x0A
+
+update map	| 0x10 -> 0x20
+
+###########################################
+
+connect:
+
+During the first connection, the player (client) MUST give his nickname
+which WILL NOT be biger than 32 caracters.
+The data of the packet is the nickname in ASCII.
+
+magic	size	type	data (nickname)
+0xBB 	0xXX 	0x01	0xXX ... 0xXX
+
+If this nickname is free the server WILL response:
+
+magic	size	type	data (OK)
+0xBB 	0x04 	0x01	0x01
+
+Otherwise:
+
+magic	size	type	data (KO)
+0xBB 	0x04 	0x01	0x00
+
+And the player WILL HAVE TO give a other nickname.
+
+If the player has no response in X seconds, he CAN consider the server off.
+
+###########################################
+
+room:
+
+If the connection is ok, the server sends the list of the create rooms.
+Each packet is a room.
+The data is divided into 4 parts:
+1) number of the room (1 byte)
+2) number of the maximum player in the room (1 byte)
+3) current number of player inside the room (1 byte)
+4) name of the room (max 32 bytes)
+
+The response of the player is the number of the room.
+Like this, the server can know if the player didn't receive the packet
+and if the server have to send again the pakect.
+If the player stills not response, he is consider off and is disconnect.
+
+Example:
+
+Server:
+magic	size	type	1)	2)	3)	4)
+0xBB 	0xXX 	0x02	0x01	0x04	0x02	0xXX ... 0xXX
+
+Client:
+magic	size	type	data (number of the room)
+0xBB 	0x04 	0x02	0x01
+
+The server sends the update of each room individually
+when their data changes.
+The client can ask the server to resend all the list of rooms.
+Like this:
+
+magic	size	type	data
+0xBB 	0x04 	0x02	0x00
+
+###########################################
+
+create:
+
+When the player create a room, he sends two informations:
+1) The number of the maximum player
+2) The name of the room (max 32 caracters)
+
+magic	size	type	1)	2)
+0xBB 	0xXX 	0x02	0x03	0xXX ... 0xXX
+
+The server looks if the name of the room is free.
+If it isn't, the server sends:
+
+magic	size	type	data (0K)
+0xBB 	0x04 	0x03	0x00
+
+Otherwise, the server send the number of the room:
+
+magic	size	type	data (number of the room)
+0xBB 	0x04 	0x03	0x04
+
+If the client doesn't receive any response from the server in X seconds,
+the client consider that the creation of the new room failed.
+
+If the creation of the room succeed, the player join directly the room
+and the server sends the information this creation to all the players
+who are connected in the room selection with the room packet prototype.
+
+###########################################
+
+join:
+
+The player sends to the server the number of the room that he wants to join.
+
+magic	size	type	data (number of the room)
+0xBB 	0x04 	0x04	0x0A
+
+The server sends the number of the player if it's ok or 0 is it fails:
+
+Good news:
+magic	size	type	data (number of the player)
+0xBB 	0x04 	0x04	0x02
+
+Bad news:
+magic	size	type	data (KO)
+0xBB 	0x04 	0x04	0x00
+
+If the server response is longer than X seconds, the request is consider failed.
+
+###########################################
+
+leave:
+
+The player sends to the server that he's leaving the room:
+
+magic	size	type	data
+0xBB 	0x04 	0x05	0x01
+
+The server can force the player to leave the room.
+This happens when the creater of a room quits it
+or if the server is going to turn off.
+
+If it's just the creater of the room who leaves it,
+the server sends:
+
+magic	size	type	data
+0xBB 	0x04 	0x05	0x01
+
+and it's waiting for the same aswer.
+If the client doesn't response in X seconds,
+the client is consider off and is disconnected.
+
+If the server is turning off, it's sends:
+
+magic	size	type	data
+0xBB 	0x04 	0x05	0x00
+
+and isn't waiting for a response.
+
+###########################################
+
+ready:
+
+The player is ready, he sends:
+
+magic	size	type	data
+0xBB 	0x04 	0x06	0x01
+
+The server sends a response to the player:
+
+magic	size	type	data
+0xBB 	0x04 	0x06	0x01
+
+If the player doesn't receive a response from the server
+he will try again to send the packet. If it fails again,
+the player consider the server off and quits.
+
+If a player doesn't want to wait more, he can quit and will send:
+
+magic	size	type	data
+0xBB 	0x04 	0x06	0x00
+
+In this condition, the server sends also:
+
+magic	size	type	data
+0xBB 	0x04 	0x06	0x00
+
+meaning that it knows the player quits.
+
+###########################################
+
+start:
+
+The player MUST start the party when he receives:
+
+magic	size	type	data
+0xBB 	0x04 	0x07	0x01
+
+###########################################
+
+end party:
+
+The player MUST end the party when he receives:
+
+magic	size	type	data
+0xBB 	0x04 	0x09	0xXX
+
+The OxXX is what the party ends.
+
+num 	 |  reason
+--------------------------
+0x01	 |  end of level
+0x02	 |  enveryone died
+0x1X	 |  server problem
+0x10	 |  unknow problem
+0x11	 |  the server crash
+
+If the player quits normaly the party he sends:
+
+magic	size	type	data
+0xBB 	0x04 	0x09	0x01
+
+###########################################
+
+score:
+
+There s two kind of score.
+
+      1)The first is the ten best scores of all time.
+
+They are in the score menu.
+
+The server send it like this:
+
+magic	size	type	nb player	length of the first player name		player name	score
+0xBB 	0xXX 	0x0A	0xXX   		0xXX   	      	    	   		0xXX ... 0xXX	0xXX 0xXX 0xXX 0xXX
+
+length of the second player name	player name		score
+0xXX   	      	    	   		0xXX ... 0xXX		0xXX 0xXX 0xXX 0xXX
+
+....
+
+length of the tenth player name		player name		score
+0xXX   	      	    	   		0xXX ... 0xXX		0xXX 0xXX 0xXX 0xXX
+
+First there is the number of player in the top 10 (if less than 10 players have played).
+Following this, the detail about the players' score.
+For each player you have the length of the player's nickname in a byte, his nickname
+and finally his score in four bytes.
+
+To ask the scores, the player sends:
+
+magic	size	type	data
+0xBB 	0x04 	0x0A	0x01
+
+	2)The second is at the end of a game
+
+Each player receives the score of every player.
+
+In the data section of the packet, first there is the number of player in a byte,
+following by the scores of the players, each in four bytes.
+
+magic	size	type	nb player	score player 1		...	score player X
+0xBB 	0xXX 	0x0A	0xXX		0xXX 0xXX 0xXX 0xXX	...	0xXX 0xXX 0xXX 0xXX
+
+###########################################
+

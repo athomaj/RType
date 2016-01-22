@@ -1,0 +1,7 @@
+//Niveau
+Level
+//Type d'objet		Moment d'apparition		PositionX(percent)	PositionY(percent)
+Vessel				10						100					45
+Vessel				10						100					50
+Vessel				10						100					55
+Vessel				20						100					20

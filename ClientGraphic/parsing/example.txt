@@ -1,0 +1,4 @@
+scale:1
+distanceMove:5
+frequencyAnimation:0.1
+frequencyMove:0.01

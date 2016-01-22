@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>Gameobject/CrossLoader.hh</itemPath>
+      <itemPath>Parser/Entity/Entity.hh</itemPath>
+      <itemPath>Gameobject/GameObject.hh</itemPath>
+      <itemPath>Gameobject/IGameObject.hh</itemPath>
+      <itemPath>Parser/Entity/Level.hh</itemPath>
+      <itemPath>Parser/Parser.hh</itemPath>
+      <itemPath>Parser/Scenario.hh</itemPath>
+      <itemPath>Parser/Entity/Vessel.hh</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f3" displayName="GameEngine" projectFiles="true">
+        <itemPath>GameEngine/GameEngine.cpp</itemPath>
+        <itemPath>GameEngine/GameEngine.hh</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Gameobject" projectFiles="true">
+        <itemPath>Gameobject/CrossLoader.cpp</itemPath>
+        <itemPath>Gameobject/GameObject.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="Parser" projectFiles="true">
+        <logicalFolder name="f1" displayName="Entity" projectFiles="true">
+          <itemPath>Parser/Entity/Entity.cpp</itemPath>
+          <itemPath>Parser/Entity/Level.cpp</itemPath>
+          <itemPath>Parser/Entity/Vessel.cpp</itemPath>
+        </logicalFolder>
+        <itemPath>Parser/Parser.cpp</itemPath>
+        <itemPath>Parser/Scenario.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="ServerRType" displayName="ServerRType" projectFiles="true">
+        <logicalFolder name="ServerRType" displayName="ServerRType" projectFiles="true">
+          <itemPath>Network/ServerRType/ServerRType/AServer.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/AServer.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ASocket.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ASocket.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ActionManager.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ActionManager.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/GameEngine.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/GameEngine.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/GameManager.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/GameManager.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/IGameManager.h</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/IServer.h</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ISocket.h</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/IThread.h</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/IThreadCond.h</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/Mutex.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/Mutex.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/Room.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/Room.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ServerTCP.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ServerTCP.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ServerUDP.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ServerUDP.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/TCPSocket.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/TCPSocket.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/Thread.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/Thread.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ThreadCond.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ThreadCond.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ThreadPool.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/ThreadPool.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/UDPSocket.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/UDPSocket.hpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/circular_buffer.cpp</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/circular_buffer.hh</itemPath>
+          <itemPath>Network/ServerRType/ServerRType/main.cpp</itemPath>
+        </logicalFolder>
+        <itemPath>Network/ServerRType/IMutex.h</itemPath>
+      </logicalFolder>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+      <logicalFolder name="f1"
+                     displayName="ParserTest"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/ParserTest.cpp</itemPath>
+        <itemPath>tests/ParserTest.hh</itemPath>
+        <itemPath>tests/ParserTestRunner.cpp</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>Parser/Entity</Elem>
+    <Elem>Network/ServerRType</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+          <commandLine>-W -Wall -Wextra</commandLine>
+        </ccTool>
+      </compileType>
+      <item path="GameEngine/GameEngine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameEngine/GameEngine.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Gameobject/CrossLoader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Gameobject/CrossLoader.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Gameobject/GameObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Gameobject/GameObject.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Gameobject/IGameObject.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Network/ServerRType/IMutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/AServer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/AServer.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ASocket.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ASocket.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ActionManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ActionManager.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/GameEngine.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/GameEngine.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/GameManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/GameManager.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/IGameManager.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/IServer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ISocket.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/IThread.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/IThreadCond.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/Mutex.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/Mutex.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/Room.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/Room.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ServerTCP.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ServerTCP.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ServerUDP.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ServerUDP.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/TCPSocket.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/TCPSocket.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/Thread.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/Thread.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ThreadCond.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ThreadCond.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ThreadPool.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ThreadPool.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/UDPSocket.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/UDPSocket.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/circular_buffer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/circular_buffer.hh"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Parser/Entity/Entity.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Parser/Entity/Entity.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Parser/Entity/Level.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Parser/Entity/Level.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Parser/Entity/Vessel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Parser/Entity/Vessel.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Parser/Parser.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Parser/Parser.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Parser/Scenario.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Parser/Scenario.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/ParserTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/ParserTest.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/ParserTestRunner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>4</standard>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="GameEngine/GameEngine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GameEngine/GameEngine.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Gameobject/CrossLoader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Gameobject/CrossLoader.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Gameobject/GameObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Gameobject/GameObject.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Gameobject/IGameObject.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Network/ServerRType/IMutex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/AServer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/AServer.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ASocket.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ASocket.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ActionManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ActionManager.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/GameEngine.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/GameEngine.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/GameManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/GameManager.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/IGameManager.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/IServer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ISocket.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/IThread.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/IThreadCond.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/Mutex.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/Mutex.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/Room.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/Room.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ServerTCP.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ServerTCP.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ServerUDP.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ServerUDP.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/TCPSocket.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/TCPSocket.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/Thread.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/Thread.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ThreadCond.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ThreadCond.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ThreadPool.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/ThreadPool.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/UDPSocket.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/UDPSocket.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/circular_buffer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/circular_buffer.hh"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Network/ServerRType/ServerRType/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Parser/Entity/Entity.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Parser/Entity/Entity.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Parser/Entity/Level.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Parser/Entity/Level.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Parser/Entity/Vessel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Parser/Entity/Vessel.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Parser/Parser.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Parser/Parser.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Parser/Scenario.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Parser/Scenario.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/ParserTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/ParserTest.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/ParserTestRunner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

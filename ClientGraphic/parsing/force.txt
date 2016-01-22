@@ -1,0 +1,27 @@
+/* starting point | ending point | size of sprites */
+/* Must Be at Beginning of txt */
+NORMAL:
+spritePosition:0,336|34,336|34,36
+scale:4
+frequencyAnimation:0.5
+
+ATTACK:
+spritePosition:0,336|34,336|34,36
+scale:4
+frequencyAnimation:0.2
+
+MOVEMENT:
+spritePosition:0,336|34,336|34,36
+scale:4
+frequencyAnimation:2.5
+
+DEATH:
+spritePosition:0,50|200,50|33,35
+scale:2.5
+frequencyAnimation:0.09
+
+##SOUND:explosion.wav
+
+##distanceMove:15
+##position:150,600
+##nextPosition:150,600
